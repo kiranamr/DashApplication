@@ -44,7 +44,7 @@ styles = {
     }
 }
 
-MainDataF = pd.read_excel('/home/dst/Documents/Data_Science/all_reports.xlsx', sheet_name='AnalysisResults', index_col=None)
+MainDataF = pd.read_excel('/Data_Science/all_reports.xlsx', sheet_name='AnalysisResults', index_col=None)
 data_xls = MainDataF.copy()
 data_xls = data_xls.apply(lambda x: pd.to_numeric(x, errors='coerce')).fillna(0)
 q2 = data_xls.quantile(.25, axis=0)
@@ -60,7 +60,7 @@ class read:
         global MainDataF
         global data_xls
 
-        #data_xls=MainDataF.copy()#pd.read_excel('/home/dst/Documents/Data_Science/all_reports.xlsx', sheet_name='AnalysisResults', index_col=None)
+        #data_xls=MainDataF.copy()#pd.read_excel('/Data_Science/all_reports.xlsx', sheet_name='AnalysisResults', index_col=None)
         b = data_xls.shape
         '''
         X_Matrix = [[0 for x in range(4)] for y in range(b[0])]
